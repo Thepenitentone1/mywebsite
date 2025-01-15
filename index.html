@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Online File Sharer</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>File Transfer</h1>
+
+        <div class="form-section">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="file-chooser">
+
+                    <!-- //ensure that it only selects images and PDF files -->
+                    <input type="file" name="file[]" accept=".pdf, image/*" multiple hidden>
+                    <i class="fas fa-cloud-upload"></i>
+                    <span>Browse Files To Upload</span>
+                </div>
+
+                <div class="field">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <input name="email" type="text" placeholder="Email of a recipient">
+                    <span class="share-button">Share</span>
+                </div>
+
+            </form>
+
+
+            <div class="feedback"> </div>
+
+            <div class="link">
+
+            </div>
+
+            <div class="chosen-files">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

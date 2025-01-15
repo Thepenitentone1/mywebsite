@@ -1,0 +1,198 @@
+:root {
+    --main-color: #5f62b5;
+    --weak-s-blue: #f8f8ff;
+    --weak-blue: #e0e1f2;
+    --image-color: #4618b2;
+    --adobe-color: #b21818;
+    --grey-color: #87877e;
+    --info-color: rgb(100, 100, 22);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("Poppins-Regular.otf");
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--main-color);
+    font-family: poppins;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 600px;
+}
+
+.form-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .file-chooser {
+        cursor: pointer;
+        background-color: var(--weak-blue);
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border: 2px dashed var(--main-color);
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .field {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        span {
+            height: 100%;
+
+            &:first-child {
+                color: white;
+                font-size: 20px;
+                line-height: 40px;
+                text-align: center;
+                width: 40px;
+                height: 100%;
+                background-color: var(--main-color);
+            }
+
+            &:last-child {
+                color: white;
+                font-size: smaller;
+                line-height: 40px;
+                text-align: center;
+                height: 100%;
+                background-color: var(--main-color);
+                margin-left: 10px;
+                padding: 0 10px;
+                text-transform: capitalize;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--weak-s-blue);
+                    color: var(--main-color);
+                }
+            }
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background-color: var(--weak-blue);
+            height: 100%;
+            padding: 0;
+            flex: 1;
+            font-family: poppins;
+            padding-left: 10px;
+        }
+    }
+
+    .feedback {
+        margin: 10px 0;
+        font-size: smaller;
+    }
+
+    // Will be used in Javascript laater
+
+    .feedback.info {
+        color: var(--info-color);
+    }
+
+    .feedback.error {
+        color: red;
+    }
+
+    .chosen-files {
+        max-height: 320px;
+        margin-left: 10px;
+        padding: 5px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .card {
+            display: flex;
+            height: 40px;
+            margin-bottom: 10px;
+            background-color: var(--weak-s-blue);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .avatar {
+                width: 40px;
+                height: 100%;
+                background-color: var(--adobe-color);
+                line-height: 40px;
+                text-align: center;
+                color: white;
+                font-size: 25px;
+            }
+
+            .avatar.image {
+                background-color: var(--image-color);
+            }
+
+            .details {
+                padding-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .name {
+                    color: rgb(68, 59, 59);
+                }
+
+                .size {
+                    color: var(--grey-color);
+                    font-size: smaller;
+                }
+            }
+        }
+    }
+
+    .link {
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+
+        a {
+            margin-left: 10px;
+            font-size: x-small;
+            color: blue;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: dotted;
+            }
+        }
+
+        i {
+            background-color: var(--weak-blue);
+            padding: 5px;
+            color: black;
+            border-radius: 5px;
+            cursor: copy;
+
+            &:hover {
+                background-color: var(--main-color);
+            }
+        }
+    }
+}
