@@ -1,0 +1,223 @@
+:root {
+  --main-color: #5f62b5;
+  --weak-s-blue: #f8f8ff;
+  --weak-blue: #e0e1f2;
+  --image-color: #4618b2;
+  --adobe-color: #b21818;
+  --grey-color: #87877e;
+  --info-color: rgb(100, 100, 22);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url("Poppins-Regular.otf");
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--main-color);
+  font-family: poppins;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+  height: 600px;
+}
+
+.form-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.form-section .file-chooser {
+  cursor: pointer;
+  background-color: var(--weak-blue);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 2px dashed var(--main-color);
+}
+
+.form-section .file-chooser i {
+  margin-right: 10px;
+}
+
+.form-section .field {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+.form-section .field span {
+  height: 100%;
+}
+
+.form-section .field span:first-child {
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.form-section .field span:last-child {
+  color: white;
+  font-size: smaller;
+  line-height: 40px;
+  text-align: center;
+  height: 100%;
+  background-color: var(--main-color);
+  margin-left: 10px;
+  padding: 0 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.form-section .field span:last-child:hover {
+  background-color: var(--weak-s-blue);
+  color: var(--main-color);
+}
+
+.form-section .field input {
+  border: none;
+  outline: none;
+  background-color: var(--weak-blue);
+  height: 100%;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: poppins;
+  padding-left: 10px;
+}
+
+.form-section .feedback {
+  margin: 10px 0;
+  font-size: smaller;
+}
+
+.form-section .feedback.info {
+  color: var(--info-color);
+}
+
+.form-section .feedback.error {
+  color: red;
+}
+
+.form-section .chosen-files {
+  max-height: 320px;
+  margin-left: 10px;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+.form-section .chosen-files::-webkit-scrollbar {
+  width: 0px;
+}
+
+.form-section .chosen-files .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: var(--weak-s-blue);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.form-section .chosen-files .card .avatar {
+  width: 40px;
+  height: 100%;
+  background-color: var(--adobe-color);
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.form-section .chosen-files .card .avatar.image {
+  background-color: var(--image-color);
+}
+
+.form-section .chosen-files .card .details {
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form-section .chosen-files .card .details .name {
+  color: #443b3b;
+}
+
+.form-section .chosen-files .card .details .size {
+  color: var(--grey-color);
+  font-size: smaller;
+}
+
+.form-section .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-section .link a {
+  margin-left: 10px;
+  font-size: x-small;
+  color: blue;
+  text-decoration: none;
+}
+
+.form-section .link a:hover {
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+}
+
+.form-section .link i {
+  background-color: var(--weak-blue);
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+  cursor: copy;
+}
+
+.form-section .link i:hover {
+  background-color: var(--main-color);
+}
+/*# sourceMappingURL=style.css.map */
